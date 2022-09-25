@@ -1,9 +1,32 @@
-$blue: #1181c3;
-$blue1:#4eb9f8;
-$bluue2: #40a7e5;
-$blue3: #61b7e9;
-$blue4: #2271a1;
-$blue5: #4c7484;
-$yellow: #f8ad11;
-$yellow1: #ecc56c;
+@import 'components/breakpoints';
+@import 'components/colors';
 
+
+
+header{
+    display: flex;
+    @include xs {
+        font-size: x-small;
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+  
+
+    h1 {
+        @include xs {
+            background-color: $yellow1;
+        }
+        @include sm {
+            background-color: $blue0;
+        }
+        @include md {
+            background-color: $blue1;
+        }
+        @include lg {
+            background-color: $blue2;
+        }
+
+    }
+}
