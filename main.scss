@@ -3,30 +3,74 @@
 @import 'components/font';
 
 *{
-    font-family: "$Regular";
+    font-family: "Light";
     justify-content: center;
-    width: 100%;
-    height: auto;
+    margin: 5px;
 }
 
 header{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px $blue1;
+    box-shadow: 0 4px 6px -6px $blue0;
+
     @include xs {
-        font-size: 8px;
-        img {
-            width: 35px;
-            height: 35px;
+        h1 {
+            font-size: 15px;
+            width: 50%;
+            color: rgb(70, 70, 70);
         }
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }  
+}
+
+nav {
+    & ul {
+        display: flex;
+        padding: 0px 0px;
+        margin: 0px;
     }
-  
-    nav {
-        ul {
-            flex-flow: row;
-            list-style: none;
+
+    & li {
+        list-style-type: none;
+    }
+
+    & a {
+        text-decoration:none;
+        color: rgb(70, 70, 70);
+    }
+    &ion-icon {
+        --ionicon-stroke-width: 26px;
+      }
+}
+
+.intro{
+    & img{
+    position: relative;
+    @include xs {
+        width: 100%;
+        height: auto;
         }
 
+    @include md {
+        width: 50%;
+        height: auto;
+        }
     }
-   
+    & p {
+        font-family: "Bold";
+        font-size: 15px;
+        color: rgb(70, 70, 70);
+    }
+
+    &pBlue{
+        color: $blue0;
+    }
+
 }
 
 // h1 {
