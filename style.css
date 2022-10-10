@@ -33,17 +33,16 @@ header {
 header img {
   width: 70px;
   height: 70px;
+  opacity: 0.7;
 }
 header h1 {
   display: none;
+  letter-spacing: 2px;
 }
 @media (min-width: 720px) {
-  header {
-    border-bottom: 2px #4eb9f8;
-    box-shadow: 0 4px 6px -6px #1181c3;
-  }
   header h1 {
-    font-size: 15px;
+    display: block;
+    font-size: 22px;
     width: 50%;
     color: rgb(70, 70, 70);
   }
@@ -54,9 +53,6 @@ nav {
 }
 nav ul {
   display: flex;
-  padding: 0px 0px;
-  margin: 0px;
-  justify-content: center;
 }
 nav li {
   list-style-type: none;
@@ -64,61 +60,85 @@ nav li {
 nav a {
   text-decoration: none;
   color: rgb(70, 70, 70);
+  letter-spacing: 2px;
+}
+nav .navDos {
+  display: none;
+}
+@media (min-width: 720px) {
+  nav .navDos {
+    display: flex;
+    box-shadow: 0px 1.3px 0.9px rgba(0, 0, 0, 0), 0px 2.9px 1.9px rgba(0, 0, 0, 0), 0px 4.8px 3.2px rgba(0, 0, 0, 0), 0px 7.2px 4.8px rgba(0, 0, 0, 0), 0px 10.4px 6.9px rgba(0, 0, 0, 0), 0px 14.7px 9.7px rgba(0, 0, 0, 0), 0px 20.9px 13.8px rgba(0, 0, 0, 0), 0px 30.3px 20.1px rgba(0, 0, 0, 0.004), 0px 46.7px 30.9px rgba(0, 0, 0, 0.018), 0px 83px 55px rgba(0, 0, 0, 0.09);
+  }
+  nav .navDos li {
+    list-style-type: none;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 70px;
+  }
+  nav .navDosli::after {
+    position: absolute;
+    opacity: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: opacity 0.3s ease-in-out;
+  }
+  nav .navDosli:hover {
+    transform: scale(1.2, 1.2);
+  }
+  nav .navDosli:hover::after {
+    opacity: 1;
+  }
+  nav .navDos a {
+    text-decoration: none;
+    font-size: medium;
+    color: rgb(70, 70, 70);
+  }
 }
 
+.intro {
+  margin-top: 10%;
+}
 .intro img {
   width: 90%;
+  height: auto;
   margin: 0px 0px 0px 20px;
+  opacity: 0.7;
 }
-.intro h2 {
+.intro h3 {
   text-align: center;
   font-size: xx-large;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   color: rgb(70, 70, 70);
 }
 @media (min-width: 720px) {
-  .intro {
-    display: flex;
-  }
-  .intro h2 {
-    font-size: 5vw;
-    text-align: left;
-    color: grey;
-  }
   .intro img {
-    height: 20vw;
-    padding: 5px;
+    width: 98%;
+    height: auto;
+    padding-right: 40px;
+  }
+  .intro h3 {
+    font-size: 5vw;
+    color: rgb(70, 70, 70);
   }
 }
 
 .article1 {
-  background-color: #40a7e5;
-  border-radius: 78% 13% 30% 72%/37% 23% 76% 61%;
-  width: 60%;
-  height: 200px;
-  margin-left: 60px;
+  background-color: rgba(51, 122, 184, 0.66);
+  width: 80%;
+  height: 250px;
+  margin: 70px;
   text-align: center;
-}
-.article1 h3 {
-  margin: 50px 20px 30px 50px;
-  padding-top: 60px;
   color: aliceblue;
+  letter-spacing: 2px;
+  line-height: 1.6;
 }
-
-.article2 {
-  background-color: #4c7484;
-  border-radius: 44% 56% 29% 71%/30% 20% 80% 70%;
-  width: 60%;
-  height: 200px;
-  margin-left: 60px;
-  text-align: center;
+.article1 h1 {
+  margin: 50px 20px 30px 10px;
+  padding-top: 50px;
 }
-.article2 h4 {
-  margin: 10px 20px 0px 20px;
-  padding-top: 60px;
-  color: aliceblue;
-}
-.article2 h5 {
-  padding-top: 5px;
-  color: aliceblue;
+.article1p {
+  margin: 10px 20px 30px 50px;
 }

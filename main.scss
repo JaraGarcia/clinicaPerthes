@@ -19,103 +19,144 @@ header{
         img {
             width: 70px;
             height: 70px;
+            opacity: 0.7;
         }
 
         h1{
             display: none;
+            letter-spacing: 2px;
         }
         
         @include md {
             h1 {
-                font-size: 15px;
+                display: block;
+                font-size: 22px;
                 width: 50%;
                 color: rgb(70, 70, 70);
             }
-
-            border-bottom: 2px $blue1;
-            box-shadow: 0 4px 6px -6px $blue0;
         }
 }
 
+//como elimino la hamburguesa para el tamaño md? 
+//como llevo el nav a la hamburguesa?
+//no me funciona hover::after
 nav {
     font-size: x-large;
     & ul {
         display: flex;
-        padding: 0px 0px;
-        margin: 0px;
-        justify-content: center;
     }
 
     & li {
         list-style-type: none;
+       
     }
 
     & a {
         text-decoration:none;
         color: rgb(70, 70, 70);
+        letter-spacing: 2px;
     }
-     
+    
+    .navDos{
+        display: none;
+    }
+    @include md {
+        .navDos{
+            display: flex;
+            box-shadow:
+            0px 1.3px 0.9px rgba(0, 0, 0, -0.002),
+            0px 2.9px 1.9px rgba(0, 0, 0, -0.004),
+            0px 4.8px 3.2px rgba(0, 0, 0, -0.006),
+            0px 7.2px 4.8px rgba(0, 0, 0, -0.006),
+            0px 10.4px 6.9px rgba(0, 0, 0, -0.006),
+            0px 14.7px 9.7px rgba(0, 0, 0, -0.005),
+            0px 20.9px 13.8px rgba(0, 0, 0, -0.002),
+            0px 30.3px 20.1px rgba(0, 0, 0, 0.004),
+            0px 46.7px 30.9px rgba(0, 0, 0, 0.018),
+            0px 83px 55px rgba(0, 0, 0, 0.09);
+    
+        & li {
+            list-style-type: none;
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            height: 70px;
+        }
+        &li::after {
+            position: absolute;
+            opacity: 0;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            transition: opacity 0.3s ease-in-out;
+          }
+        
+        &li:hover {
+            transform: scale(1.2, 1.2);
+          }
+
+        &li:hover::after {
+            opacity: 1;
+          }
+    
+        & a {
+            text-decoration:none;
+            font-size: medium;
+            color: rgb(70, 70, 70);
+        }
+        }
+    }
 }
 
 .intro{
+    margin-top: 10%;
+    
     & img{
     width: 90%;
+    height: auto;
     margin: 0px 0px 0px 20px;
-    
+    opacity: 0.7;
     }
 
-    & h2 {
+    & h3 {
     text-align: center;
     font-size: xx-large;
-    letter-spacing: 4px;
+    letter-spacing: 2px;
     color: rgb(70, 70, 70);
     }
 
     @include md {
-        display: flex;
-
-        & h2 {
-            font-size: 5vw;
-            text-align: left;
-            color: grey;
-        }
+       
         & img{
-            height: 20vw;
-            padding: 5px;
+            width: 98%;
+            height: auto;
+            padding-right: 40px;
+        }
+        & h3 {
+            font-size: 5vw;
+            color: rgb(70, 70, 70);
         }
     }
 }
 
 .article1{
-    background-color: $blue2;
-    border-radius: 78% 13% 30% 72% / 37% 23% 76% 61%  ;
-    width: 60%;
-    height: 200px;
-    margin-left: 60px;
+    background-color: rgba(51, 122, 184, 0.66);
+    width: 80%;
+    height: 250px;
+    margin: 70px;
     text-align: center;
+    color: aliceblue;
+    letter-spacing: 2px;
+    line-height: 1.6;
 
-    & h3{
-        margin: 50px 20px 30px 50px;
-        padding-top: 60px;
-        color: aliceblue;
+    & h1{
+        margin: 50px 20px 30px 10px;
+        padding-top: 50px;
+    }
+
+    &p{
+        margin: 10px 20px 30px 50px;
+        
     }
 }
 
-.article2{
-    background-color: $blue5;
-    border-radius: 44% 56% 29% 71% / 30% 20% 80% 70% ;
-    width: 60%;
-    height: 200px;
-    margin-left: 60px;
-    text-align: center;
-
-    & h4 {
-        margin: 10px 20px 0px 20px;
-        padding-top: 60px;
-        color: aliceblue;
-    }
-    & h5 {
-        padding-top: 5px;
-        color: aliceblue;
-    }
-}
