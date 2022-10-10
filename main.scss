@@ -4,35 +4,46 @@
 
 *{
     font-family: "Light";
-    justify-content: center;
     margin: 5px;
+    padding: 0px;
+    box-sizing: border-box;
+    
 }
 
 header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 2px $blue1;
-    box-shadow: 0 4px 6px -6px $blue0;
+   
 
-    @include xs {
-        h1 {
-            font-size: 15px;
-            width: 50%;
-            color: rgb(70, 70, 70);
-        }
         img {
-            width: 50px;
-            height: 50px;
+            width: 70px;
+            height: 70px;
         }
-    }  
+
+        h1{
+            display: none;
+        }
+        
+        @include md {
+            h1 {
+                font-size: 15px;
+                width: 50%;
+                color: rgb(70, 70, 70);
+            }
+
+            border-bottom: 2px $blue1;
+            box-shadow: 0 4px 6px -6px $blue0;
+        }
 }
 
 nav {
+    font-size: x-large;
     & ul {
         display: flex;
         padding: 0px 0px;
         margin: 0px;
+        justify-content: center;
     }
 
     & li {
@@ -43,48 +54,68 @@ nav {
         text-decoration:none;
         color: rgb(70, 70, 70);
     }
-    &ion-icon {
-        --ionicon-stroke-width: 26px;
-      }
+     
 }
 
 .intro{
     & img{
-    position: relative;
-    @include xs {
-        width: 100%;
-        height: auto;
-        }
+    width: 90%;
+    margin: 0px 0px 0px 20px;
+    
+    }
+
+    & h2 {
+    text-align: center;
+    font-size: xx-large;
+    letter-spacing: 4px;
+    color: rgb(70, 70, 70);
+    }
 
     @include md {
-        width: 50%;
-        height: auto;
+        display: flex;
+
+        & h2 {
+            font-size: 5vw;
+            text-align: left;
+            color: grey;
+        }
+        & img{
+            height: 20vw;
+            padding: 5px;
         }
     }
-    & p {
-        font-family: "Bold";
-        font-size: 15px;
-        color: rgb(70, 70, 70);
-    }
-
-    &pBlue{
-        color: $blue0;
-    }
-
 }
 
-// h1 {
-//     @include xs {
-//         background-color: $yellow1;
-//     }
-//     @include sm {
-//         background-color: $blue0;
-//     }
-//     @include md {
-//         background-color: $blue1;
-//     }
-//     @include lg {
-//         background-color: $blue2;
-//     }
+.article1{
+    background-color: $blue2;
+    border-radius: 78% 13% 30% 72% / 37% 23% 76% 61%  ;
+    width: 60%;
+    height: 200px;
+    margin-left: 60px;
+    text-align: center;
 
-// }
+    & h3{
+        margin: 50px 20px 30px 50px;
+        padding-top: 60px;
+        color: aliceblue;
+    }
+}
+
+.article2{
+    background-color: $blue5;
+    border-radius: 44% 56% 29% 71% / 30% 20% 80% 70% ;
+    width: 60%;
+    height: 200px;
+    margin-left: 60px;
+    text-align: center;
+
+    & h4 {
+        margin: 10px 20px 0px 20px;
+        padding-top: 60px;
+        color: aliceblue;
+    }
+    & h5 {
+        padding-top: 5px;
+        color: aliceblue;
+    }
+}
