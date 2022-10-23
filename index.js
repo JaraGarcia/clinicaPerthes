@@ -1,19 +1,40 @@
-// if else
-// let position = window.prompt("¿En que posición has quedado? primero, segundo o tercero ");
+class form {
 
-// if (position == "primero"){
-//     window.alert("¡Felicidades! Has ganado la medalla de oro");
-// } else if (position == "segundo"){
-//     window.alert("¡Felicidades! Has ganado la medalla de plata");
-// } else if(position == "tercero" ){
-//     window.alert("¡Felicidades! Has ganado la medalla de bronce");
-// } else {
-//     window.alert("Lo sentimos, vuelve a intentarlo");
-// }
+    constructor (){
+        this.pregunta1= this.pregunta1;
+ 
+    }
 
-// //ternary
+    altoRiesgo(){
+    this.respuesta = 5;
+    this.color= rojo;
+    }
+    medioRiesgo(){
+    this.respuesta2 = 3;
+    this.color= rojo;
+    }
+    bajoRiesgo(){
+    this.respuesta3 = 1;
+    this.color= rojo;
+    }
+    }
 
-// let age = window.prompt("Dime tu edad")
-// age >=18 ? window.alert("mayor de edad") : window.alert("eres menor de edad");
+//Almacenar las respuestas en objeto o array. 
+/*
 
-// // && y 
+const test = 
+[   persona 0 {
+        Respuesta 1
+        Respueta 2
+        Respuetsa 3
+    },
+    persona 1 {
+        Respuesta 1
+        Respueta 2
+        Respuetsa 3
+    },
+]
+
+popup de la respuesta 
+
+*/

@@ -9,36 +9,46 @@
     <title>Perthes International Clinic</title>
 </head>
 <body>
+
+
     <header>
-
-            <h1> CENTRO <br> INTERNACIONAL <br> PERTHES</h1>
+            <div>
+            <p style="color: grey;"> CENTRO INTERNACIONAL</p>
+            <p> PERTHES</p>
+            </div>
             <img src="landing/logo sin fondo.png" alt="LOGO">
-        
     </header>
+
+
     <nav>
-        <ul>
-            <li><a href="#"> <ion-icon name="menu-outline"></ion-icon> </a> </li>
-            <li><a href="#"> <ion-icon name="mail-outline"></ion-icon> </a> </li>
-            <li><a href="#"> <ion-icon name="call-outline"></ion-icon> </a> </li>
-            <li><a href="#"> <ion-icon name="logo-twitter"></ion-icon> </a> </li>
-        </ul>
-
-        <ul class="navDos">
-            <li><a href="#">Enfermedad de Perthes</a></li>
-            <li><a href="#">Radiología</a></li>
-            <li><a href="#">Pronóstico</a></li>
-            <li><a href="#">Tratamiento</a></li>
-            <li><a href="#">I+D+i</a></li>
-            <li><a href="#">Escuela familiar</a></li>
-            <li><a href="#">Eventos</a></li>
-            <li><a href="#">Otro más</a></li>
-
-        </ul>
+        <div class="dropBtn">
+            <button onclick="menu()" class="dropBtn"> <ion-icon name="menu-outline"></ion-icon> </button>
+                <div id="dropD" class="dropDwn-content">
+                    <a href="#">Enfermedad de Perthes</a>  
+                    <a href="#">Radiología</a>
+                    <a href="#">Pronóstico</a>
+                    <a href="#">Tratamiento</a>
+                    <a href="#">I+D+i</a>
+                    <a href="escuelaFamilias.html">Escuela de familias</a>
+                    <a href="#">Eventos</a>
+                    <a href="#">Otro más</a>
+                </div>
+            </div>
+            <ul class="rrss">
+                <li><a href="mailto:perthes.cip@gmail.com" target="_blank"> <ion-icon name="mail-outline"></ion-icon> </a> </li>
+                <li><a href="tel:+34659681298"> <ion-icon name="call-outline"></ion-icon> </a> </li>
+                <li><a href="https://twitter.com/centrodeperthes" target="_blank"> <ion-icon name="logo-twitter"></ion-icon> </a> </li>
+            </ul>
     </nav>
 
+
+
     <div class="intro">
-        <img  src="img/fam.png" alt="foto de familia">
-        <h3>Pioneros en el tratamiento de Perthes. <br><br> - Desde 1992 - </h3>
+            <img  src="img/famGuay.jpeg" alt="foto de familia">
+        <div>
+            <h3>Pioneros en el tratamiento de Perthes.</h3>
+            <h3> - Desde 1992 - </h3>
+        </div>
     </div>
 
     <article class="article1">
@@ -58,5 +68,6 @@
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 <script src="index.js" type="text/javascript"></script>
+<script src="menu.js" type="text/javascript"></script>
 </body>
 </html>
